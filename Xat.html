@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Xat.js"></script>
+    <link rel="stylesheet" href="XatLLM.css"/>
+    <title>Xat</title>
+</head>
+<body onload="LlistaAmics()">
+    <div id="xat">
+        <div id="Amistades">
+            <button id="State" onclick="StateChanger()"> START </button>
+            <button id="logout" onclick="logout()"> LOG OUT </button>
+            <div id="AddUser">
+            <br>
+            <label for="email" onclick="">Email</label>
+            <br>
+            <input type="email" name="email" id="email"></input>
+            <br>
+            <input type="submit" class="submit" value=" Añadir Amigo " onclick="AfegirAmic()"></input>
+            </div>
+            <div id="msg">            
+            MENSAJE DESTINADO A
+            <select name="Amigos" id="Amigos" onchange="modificarTarget()">
+            </select>
+            <br>
+            MENSAJE
+            <input type="text" id="mensaje">
+            </input>
+            <br>
+            <input type="submit" value=" Enviar Mensaje " onclick="enviarMensaje()"></input>
+            <br>
+            <button id="startConv" onclick="iniciarConversacion()">Iniciar conversacion</button>
+            <br>
+            <p id="Recibido">
+            </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
